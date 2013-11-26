@@ -1,20 +1,20 @@
-Mit dieser App hast du deine digitalcoins immer dabei, in deiner Hosentasche! Du kannst Zahlungen senden, indem du einfach einen QR-Code scannst oder zwei Telefone aneinanderhälst (NFC). digitalcoin Wallet ist einfach zu nutzen und zuverlässig, gleichzeitig aber auch sicher und schnell.
+Mit dieser App hast du deine Frankos immer dabei, in deiner Hosentasche! Du kannst Zahlungen senden, indem du einfach einen QR-Code scannst oder zwei Telefone aneinanderhälst (NFC). Franko Wallet ist einfach zu nutzen und zuverlässig, gleichzeitig aber auch sicher und schnell.
 
 FEATURES:
 
 • Kein Cloud-Server oder Web-Dienst nötig! Diese Wallet ist wahrlich Peer to Peer.
-• Anzeige des Wallet-Guthabens in digitalcoin und verschiedenen lokalen Währungen.
-• Senden und Empfangen von digitalcoin via NFC, QR-Codes oder digitalcoin URLs.
+• Anzeige des Wallet-Guthabens in Franko und verschiedenen lokalen Währungen.
+• Senden und Empfangen von Franko via NFC, QR-Codes oder Franko URLs.
 • Adressbuch für regelmäßig genutzte Empfänger.
 • Offline-Unterstützung, Transaktionen werden dann ausgeführt, wenn das Gerät wieder online ist.
-• System-Benachrichtigungen für digitalcoin-Konnektivität und Empfang von Zahlungen.
-• App-Widget zeigt digitalcoin-Guthaben an.
+• System-Benachrichtigungen für Franko-Konnektivität und Empfang von Zahlungen.
+• App-Widget zeigt Franko-Guthaben an.
 
-Weitere Informationen zu digitalcoin findest Du unter
-http://digitalcoin.co
+Weitere Informationen zu Franko findest Du unter
+http://www.frankos.org
 
-Wenn Du zu digitalcoin Wallet beitragen willst, das Projekt befindet sich auf
-https://github.com/HashEngineering/digitalcoin-wallet
+Wenn Du zu Franko Wallet beitragen willst, das Projekt befindet sich auf
+https://github.com/HashEngineering/franko-wallet
 
 Lizenz: GPLv3
 Nutzung auf eigene Gefahr!

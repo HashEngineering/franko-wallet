@@ -1,19 +1,19 @@
-Samodzielny portfel digitalcoin dla Twojego urządzenia Android. Możesz wysyłać digitalcoin pomiędzy telefonami skanując kod QR, który jest wyświetlany przez aplikacje, lub przez NFC (Near Field Communication).
+Samodzielny portfel Franko dla Twojego urządzenia Android. Możesz wysyłać Franko pomiędzy telefonami skanując kod QR, który jest wyświetlany przez aplikacje, lub przez NFC (Near Field Communication).
 
 FUNKCJE:
 
-• Wyświetlanie stanu konta portfela w digitalcoin i rożnych innych walutach.
-• Wysyłanie i odbieranie digitalcoin przez NFC, kod QR albo digitalcoin URL.
-• Książka adresowa dla regularnie używanych adresów digitalcoin.
+• Wyświetlanie stanu konta portfela w Franko i rożnych innych walutach.
+• Wysyłanie i odbieranie Franko przez NFC, kod QR albo Franko URL.
+• Książka adresowa dla regularnie używanych adresów Franko.
 • Możliwość dodania transakcji offline, wykonywanych po połączeniu z siecią.
-• Notyfikacje systemowe o połączeniu z siecią digitalcoin i otrzymanych monetach.
-• Widget na stan konta digitalcoin.
+• Notyfikacje systemowe o połączeniu z siecią Franko i otrzymanych monetach.
+• Widget na stan konta Franko.
 
-Więcej o digitalcoin dowiesz się pod adresem:
-http://digitalcoin.co
+Więcej o Franko dowiesz się pod adresem:
+http://www.frankos.org
 
-Jeżeli chcesz wesprzeć digitalcoin Wallet, kody źródłowe projektu znajdują się pod adresem:
-https://github.com/HashEngineering/digitalcoin-wallet
+Jeżeli chcesz wesprzeć Franko Wallet, kody źródłowe projektu znajdują się pod adresem:
+https://github.com/HashEngineering/franko-wallet
 
 Licencja: GPLv3
 Używanie jedynie na własne ryzyko!

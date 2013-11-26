@@ -1,19 +1,19 @@
-Dit is een standalone digitalcoin Wallet voor uw Android apparaat. U kan direct digitalcoins versturen tussen telefoons door simpelweg de QR-code te scannen die de app weergeeft of via NFC (Near Field Communication).
+Dit is een standalone Franko Wallet voor uw Android apparaat. U kan direct Frankos versturen tussen telefoons door simpelweg de QR-code te scannen die de app weergeeft of via NFC (Near Field Communication).
 
 FUNCTIES:
 
-• Weergeven van het wallet saldo in digitalcoin en verschillende andere valuta.
-• Verzenden en ontvangen van digitalcoin via NFC, QR-codes of digitalcoin URLs.
-• Adresboek voor veelgebruikte digitalcoin adressen.
+• Weergeven van het wallet saldo in Franko en verschillende andere valuta.
+• Verzenden en ontvangen van Franko via NFC, QR-codes of Franko URLs.
+• Adresboek voor veelgebruikte Franko adressen.
 • Transacties ingeven tijdens het offline zijn, deze zullen worden uitgevoerd wanneer u online komt.
-• Systeem melding over digitalcoin connectiviteit en ontvangen digitalcoins.
-• Widget voor digitalcoin saldo.
+• Systeem melding over Franko connectiviteit en ontvangen Frankos.
+• Widget voor Franko saldo.
 
-Voor meer informatie over digitalcoin kunt u terecht op
-http://digitalcoin.co
+Voor meer informatie over Franko kunt u terecht op
+http://www.frankos.org
 
-Als u een bijdrage wil leveren aan digitalcoin Wallet, het project is te vinden op
-https://github.com/HashEngineering/digitalcoin-wallet
+Als u een bijdrage wil leveren aan Franko Wallet, het project is te vinden op
+https://github.com/HashEngineering/franko-wallet
 
 Licentie: GPLv3
 Gebruik op eigen risico!

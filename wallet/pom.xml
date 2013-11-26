@@ -7,10 +7,10 @@
 	<artifactId>wallet</artifactId>
 	<packaging>apk</packaging>
 	<version>1.00</version>
-	<name>digitalcoin Wallet</name>
+	<name>Franko Wallet</name>
 
 	<parent>
-		<groupId>hashengineering.digitalcoin.wallet</groupId>
+		<groupId>hashengineering.franko.wallet</groupId>
 		<artifactId>base</artifactId>
 		<version>1</version>
 	</parent>
@@ -49,16 +49,16 @@
 			<type>apklib</type>
 		</dependency>
 
-		<!-- com.google.digitalcoin.* -->
+		<!-- com.google.franko.* -->
 		<dependency>
 			<groupId>com.google</groupId>
-			<artifactId>digitalcoinj</artifactId>
+			<artifactId>frankoj</artifactId>
 			<version>0.11</version>
 		</dependency>
 
-		<!-- hashengineering.digitalcoin.wallet.integration.android.* -->
+		<!-- hashengineering.franko.wallet.integration.android.* -->
 		<dependency>
-			<groupId>hashengineering.digitalcoin.wallet</groupId>
+			<groupId>hashengineering.franko.wallet</groupId>
 			<artifactId>integration-android</artifactId>
 			<version>1.0</version>
 		</dependency>
@@ -194,7 +194,7 @@
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>2.5.2</version>
 				<configuration>
-					<onlyAnalyze>hashengineering.digitalcoin.wallet.-</onlyAnalyze>
+					<onlyAnalyze>hashengineering.franko.wallet.-</onlyAnalyze>
 				</configuration>
 			</plugin>
 		</plugins>

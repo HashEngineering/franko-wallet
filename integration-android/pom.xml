@@ -6,10 +6,10 @@
 
 	<artifactId>integration-android</artifactId>
 	<version>1.0</version>
-	<name>digitalcoin Integration for Android</name>
+	<name>Franko Integration for Android</name>
 
 	<parent>
-		<groupId>hashengineering.digitalcoin.wallet</groupId>
+		<groupId>hashengineering.franko.wallet</groupId>
 		<artifactId>base</artifactId>
 		<version>1</version>
 	</parent>
