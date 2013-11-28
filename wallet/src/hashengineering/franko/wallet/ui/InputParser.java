@@ -29,13 +29,7 @@ import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface.OnClickListener;
 
-import com.google.franko.core.Address;
-import com.google.franko.core.AddressFormatException;
-import com.google.franko.core.Base58;
-import com.google.franko.core.DumpedPrivateKey;
-import com.google.franko.core.ECKey;
-import com.google.franko.core.ProtocolException;
-import com.google.franko.core.Transaction;
+import com.google.franko.core.*;
 import com.google.franko.uri.BitcoinURI;
 import com.google.franko.uri.BitcoinURIParseException;
 
@@ -61,7 +55,7 @@ public abstract class InputParser
 		@Override
 		public void parse()
 		{
-			if (input.startsWith("bitcoin:"))
+			if (input.startsWith(CoinDefinition.coinURIScheme))
 			{
 				try
 				{
@@ -189,6 +183,6 @@ public abstract class InputParser
 	}
 
 	private static final Pattern PATTERN_BITCOIN_ADDRESS = Pattern.compile("[" + new String(Base58.ALPHABET) + "]{20,40}");
-	private static final Pattern PATTERN_PRIVATE_KEY = Pattern.compile("5[" + new String(Base58.ALPHABET) + "]{50,51}");
+	private static final Pattern PATTERN_PRIVATE_KEY = Pattern.compile("6[" + new String(Base58.ALPHABET) + "]{50,51}");
 	private static final Pattern PATTERN_TRANSACTION = Pattern.compile("[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ$\\*\\+\\-\\.\\/\\:]{100,}");
 }

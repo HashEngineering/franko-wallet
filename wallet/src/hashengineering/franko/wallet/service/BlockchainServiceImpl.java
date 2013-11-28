@@ -79,6 +79,7 @@ import com.google.franko.core.Wallet.BalanceType;
 import com.google.franko.core.WalletEventListener;
 import com.google.franko.discovery.DnsDiscovery;
 import com.google.franko.discovery.PeerDiscovery;
+import com.google.franko.discovery.SeedPeers;
 import com.google.franko.discovery.PeerDiscoveryException;
 import com.google.franko.store.BlockStore;
 import com.google.franko.store.BlockStoreException;
@@ -427,7 +428,14 @@ public class BlockchainServiceImpl extends android.app.Service implements Blockc
 						}
 
 						if (!connectTrustedPeerOnly)
+                        {
 							peers.addAll(Arrays.asList(normalPeerDiscovery.getPeers(timeoutValue, timeoutUnit)));
+
+                            SeedPeers seedPeers = new SeedPeers(Constants.NETWORK_PARAMETERS);
+
+                            peers.addAll(Arrays.asList(seedPeers.getPeers2(timeoutValue, timeoutUnit)));
+
+                        }
 
 						// workaround because PeerGroup will shuffle peers
 						if (needsTrimPeersWorkaround)
