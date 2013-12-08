@@ -9,7 +9,7 @@
 	<name>Franko Integration for Android</name>
 
 	<parent>
-		<groupId>hashengineering.franko.wallet</groupId>
+		<groupId>de.schildbach.wallet</groupId>
 		<artifactId>base</artifactId>
 		<version>1</version>
 	</parent>

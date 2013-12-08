@@ -10,7 +10,7 @@
 	<name>Franko Wallet</name>
 
 	<parent>
-		<groupId>hashengineering.franko.wallet</groupId>
+		<groupId>de.schildbach.wallet</groupId>
 		<artifactId>base</artifactId>
 		<version>1</version>
 	</parent>
@@ -56,9 +56,9 @@
 			<version>0.11</version>
 		</dependency>
 
-		<!-- hashengineering.franko.wallet.integration.android.* -->
+		<!-- de.schildbach.wallet.integration.android.* -->
 		<dependency>
-			<groupId>hashengineering.franko.wallet</groupId>
+			<groupId>de.schildbach.wallet</groupId>
 			<artifactId>integration-android</artifactId>
 			<version>1.0</version>
 		</dependency>
@@ -194,7 +194,7 @@
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>2.5.2</version>
 				<configuration>
-					<onlyAnalyze>hashengineering.franko.wallet.-</onlyAnalyze>
+					<onlyAnalyze>de.schildbach.wallet.-</onlyAnalyze>
 				</configuration>
 			</plugin>
 		</plugins>
