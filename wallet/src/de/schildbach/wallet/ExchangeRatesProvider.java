@@ -347,7 +347,7 @@ public class ExchangeRatesProvider extends ContentProvider
 				final Map<String, ExchangeRate> rates = new TreeMap<String, ExchangeRate>();
 
                 //Add Bitcoin information
-                rates.put(CoinDefinition.cryptsyMarketCurrency, new ExchangeRate(CoinDefinition.cryptsyMarketCurrency, new BigInteger(String.format("%.8f", btcRate).replace(",", ".")), "pubapi.cryptsy.com"));
+                rates.put(CoinDefinition.cryptsyMarketCurrency, new ExchangeRate(CoinDefinition.cryptsyMarketCurrency, GenericUtils.toNanoCoins(String.format("%.8f", btcRate).replace(",", "."), 0), "pubapi.cryptsy.com"));
 
 				final JSONObject head = new JSONObject(content.toString());
 				for (final Iterator<String> i = head.keys(); i.hasNext();)
@@ -374,7 +374,7 @@ public class ExchangeRatesProvider extends ContentProvider
 						{
 							try
 							{
-								rates.put(currencyCode, new ExchangeRate(currencyCode, new BigInteger(rate.replace(",", ".")), url.getHost()));
+								rates.put(currencyCode, new ExchangeRate(currencyCode, GenericUtils.toNanoCoins(rate.replace(",", "."), 0), url.getHost()));
 
 							}
 							catch (final ArithmeticException x)
