@@ -52,7 +52,9 @@ import de.schildbach.wallet.AddressBookProvider;
 import de.schildbach.wallet.Constants;
 import de.schildbach.wallet.util.CircularProgressView;
 import de.schildbach.wallet.util.WalletUtils;
+
 import hashengineering.franko.wallet.R;
+
 
 /**
  * @author Andreas Schildbach
@@ -65,7 +67,8 @@ public class TransactionsListAdapter extends BaseAdapter
 	private final int maxConnectedPeers;
 
 	private final List<Transaction> transactions = new ArrayList<Transaction>();
-	private int precision = Constants.BTC_MAX_PRECISION;
+	private int precision = 0;
+	private int shift = 0;
 	private boolean showEmptyText = false;
 	private boolean showBackupWarning = false;
 
@@ -102,9 +105,10 @@ public class TransactionsListAdapter extends BaseAdapter
 		textInternal = context.getString(R.string.wallet_transactions_fragment_internal);
 	}
 
-	public void setPrecision(final int precision)
+	public void setPrecision(final int precision, final int shift)
 	{
 		this.precision = precision;
+		this.shift = shift;
 
 		notifyDataSetChanged();
 	}
@@ -244,7 +248,7 @@ public class TransactionsListAdapter extends BaseAdapter
 				rowConfidenceCircular.setProgress(1);
 				rowConfidenceCircular.setMaxProgress(1);
 				rowConfidenceCircular.setSize(confidence.numBroadcastPeers());
-				rowConfidenceCircular.setMaxSize(maxConnectedPeers - 1);
+				rowConfidenceCircular.setMaxSize(maxConnectedPeers / 2); // magic value
 				rowConfidenceCircular.setColors(colorInsignificant, colorInsignificant);
 			}
 			else if (confidenceType == ConfidenceType.BUILDING)
@@ -308,7 +312,7 @@ public class TransactionsListAdapter extends BaseAdapter
 
 			// address
 			final TextView rowAddress = (TextView) row.findViewById(R.id.transaction_row_address);
-			final Address address = sent ? WalletUtils.getToAddress(tx) : WalletUtils.getFromAddress(tx);
+			final Address address = sent ? WalletUtils.getFirstToAddress(tx) : WalletUtils.getFirstFromAddress(tx);
 			final String label;
 			if (isCoinBase)
 				label = textCoinBase;
@@ -326,7 +330,7 @@ public class TransactionsListAdapter extends BaseAdapter
 			final CurrencyTextView rowValue = (CurrencyTextView) row.findViewById(R.id.transaction_row_value);
 			rowValue.setTextColor(textColor);
 			rowValue.setAlwaysSigned(true);
-			rowValue.setPrecision(precision);
+			rowValue.setPrecision(precision, shift);
 			rowValue.setAmount(value);
 
 			// extended message

@@ -51,6 +51,7 @@ import com.google.bitcoin.core.VersionMessage;
 
 import de.schildbach.wallet.service.BlockchainService;
 import de.schildbach.wallet.service.BlockchainServiceImpl;
+
 import hashengineering.franko.wallet.R;
 
 /**

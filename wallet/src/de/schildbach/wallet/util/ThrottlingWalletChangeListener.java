@@ -28,6 +28,8 @@ import com.google.bitcoin.core.ECKey;
 import com.google.bitcoin.core.Transaction;
 import com.google.bitcoin.core.Wallet;
 import com.google.bitcoin.core.WalletEventListener;
+import com.google.bitcoin.script.Script;
+
 
 /**
  * @author Andreas Schildbach
@@ -137,4 +139,8 @@ public abstract class ThrottlingWalletChangeListener implements WalletEventListe
 	{
 		// swallow
 	}
+    public void onScriptsAdded(Wallet wallet, List<Script> scripts)
+    {
+
+    }
 }

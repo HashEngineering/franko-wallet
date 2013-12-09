@@ -38,6 +38,7 @@ import com.google.bitcoin.core.Address;
 import com.google.bitcoin.core.ECKey;
 import com.google.bitcoin.core.Wallet;
 
+
 import de.schildbach.wallet.AddressBookProvider;
 import de.schildbach.wallet.Constants;
 import de.schildbach.wallet.util.WalletUtils;
@@ -123,7 +124,7 @@ public class WalletAddressesAdapter extends BaseAdapter
 
 		final boolean isDefaultAddress = address.toString().equals(selectedAddress);
 
-		row.setBackgroundResource(isDefaultAddress ? R.color.bg_less_bright : R.color.bg_bright);
+		row.setBackgroundResource(isDefaultAddress ? R.color.bg_list_selected : R.color.bg_list);
 
 		final TextView addressView = (TextView) row.findViewById(R.id.address_book_row_address);
 		addressView.setText(WalletUtils.formatAddress(address, Constants.ADDRESS_FORMAT_GROUP_SIZE, Constants.ADDRESS_FORMAT_LINE_SIZE));

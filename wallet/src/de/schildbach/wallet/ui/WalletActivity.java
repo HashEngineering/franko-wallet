@@ -42,9 +42,9 @@ import java.util.TimeZone;
 
 import javax.annotation.Nonnull;
 
+
 import com.google.bitcoin.core.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -101,8 +101,6 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 	private SharedPreferences prefs;
 
 	private static final int REQUEST_CODE_SCAN = 0;
-
-	private static final Logger log = LoggerFactory.getLogger(WalletActivity.class);
 
 	@Override
 	protected void onCreate(final Bundle savedInstanceState)
@@ -650,7 +648,6 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 			try
 			{
 				CrashReporter.appendSavedCrashTrace(stackTrace);
-				CrashReporter.appendSavedCrashApplicationLog(applicationLog);
 			}
 			catch (final IOException x)
 			{
@@ -689,15 +686,6 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 					final StringBuilder deviceInfo = new StringBuilder();
 					CrashReporter.appendDeviceInfo(deviceInfo, WalletActivity.this);
 					return deviceInfo;
-				}
-
-				@Override
-				protected CharSequence collectApplicationLog() throws IOException
-				{
-					if (applicationLog.length() > 0)
-						return applicationLog;
-					else
-						return null;
 				}
 
 				@Override
@@ -853,6 +841,8 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 				dialog.setNeutralButton(R.string.button_dismiss, null);
 			}
 			dialog.show();
+
+			log.info("imported " + numKeysImported + " of " + numKeysToImport + " private keys");
 		}
 		catch (final IOException x)
 		{
@@ -903,6 +893,8 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 			});
 			dialog.setNegativeButton(R.string.button_dismiss, null);
 			dialog.show();
+
+			log.info("exported " + keys.size() + " private keys to " + file);
 		}
 		catch (final IOException x)
 		{
@@ -925,5 +917,7 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 		intent.setType("x-"+ CoinDefinition.coinName.toLowerCase()+"/private-keys");
 		intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
 		startActivity(Intent.createChooser(intent, getString(R.string.export_keys_dialog_mail_intent_chooser)));
+
+		log.info("invoked archive private keys chooser");
 	}
 }

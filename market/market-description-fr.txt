@@ -7,8 +7,13 @@ FONCTIONS:
 • Envoyer et recevoir des Frankos via NFC, QR-codes ou Franko URLs.
 • Carnet d'adresses pour les adresses Franko fréquemment utilisées.
 • Saisir des transactions offline, les exécuter online.
+<<<<<<< HEAD
 • Notifications système pour la connectivité Franko et la réception des Frankos.
 • App widget pour le solde du compte Franko.
+=======
+• Notification système pour la réception des bitcoins.
+• App widget pour le solde du compte Bitcoin.
+>>>>>>> upstream/prod
 
 Pour en savoir plus sur Franko:
 http://www.frankos.org

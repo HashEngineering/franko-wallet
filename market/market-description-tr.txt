@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Android cihazınız için bağımsız bir Franko cüzdanı. Telefondan telefonda uygulama tarafından görüntülenen QR kodu tarayarak ya da NFC vasıtasıyla NFC (Near Field Communication) Franko gönderebilirsiniz.
 
 ÖZELLİKLERİ:
@@ -8,6 +9,19 @@ Android cihazınız için bağımsız bir Franko cüzdanı. Telefondan telefonda
 • Çevrimdışında girilen muameleler çevrimiçine girilince işlenir.
 • Alınan Frankoler ve Franko bağlantısı için sistem bildirimleri.
 • Franko bakiyesi için uygulama widget'i.
+=======
+digitalcoin'leriniz daima cebinizde sizinle olsun! Herhangi bir QR kodunu okuyarak çabuk ödeme yapabilirsiniz. Bir tüccar olarak ödemeleri güvenilir ve anında alabilirsiniz. digitalcoin cüzdanı ilk mobil digitalcoin uygulamasıdır ve muhtemelen en güvenli digitalcoin uygulamasıdır!
+
+İŞLEVLERİ:
+• Hiçbir oturuma, web ya da bulut hizmetine gerek yoktur. Bu cüzdan merkezsiz ve eşten eşedir.
+• digitalcoin meblağlarının BTC ve mBTC olarak gösterilmesi.
+• Dövizlere ve dövizlerden dönüştürme.
+• NFC, QR kodu veya digitalcoin bağlantıları ile digitalcoin gönderir ve alır.
+• Sık kullanılan digitalcoin adresleri için adres defteri içerir.
+• Çevrimdışı olduğunuzda Bluetooth vasıtasıyla ödemeler.
+• Alınan digitalcoin'ler için sistem bildirimleri.
+• digitalcoin bakiyesini görüntüleyen widget.
+>>>>>>> upstream/prod
 
 Franko hakkında daha fazla bilgi için şu siteyi ziyaret edebilirsiniz:
 http://www.frankos.org
@@ -16,5 +30,5 @@ Franko Wallet uygulamasına katkıda bulunmak istiyorsanız proje sayfasını zi
 https://github.com/HashEngineering/franko-wallet
 
 Lisans: GPLv3
-Tüm riski siz üstlenirsiniz!
+Tüm riski siz üstlenmiş olursunuz.
 http://www.gnu.org/licenses/gpl-3.0.en.html

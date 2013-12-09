@@ -26,9 +26,6 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ContentResolver;
@@ -43,6 +40,7 @@ import android.widget.EditText;
 
 import com.google.bitcoin.core.ECKey;
 import com.google.bitcoin.core.Wallet;
+
 
 import de.schildbach.wallet.Constants;
 import de.schildbach.wallet.util.Crypto;
@@ -60,8 +58,6 @@ public final class ImportKeysActivity extends AbstractWalletActivity
 	private ContentResolver contentResolver;
 
 	private Uri backupFileUri;
-
-	private static final Logger log = LoggerFactory.getLogger(ImportKeysActivity.class);
 
 	@Override
 	protected void onCreate(final Bundle savedInstanceState)
@@ -228,6 +224,8 @@ public final class ImportKeysActivity extends AbstractWalletActivity
 			}
 			dialog.setOnCancelListener(finishListener);
 			dialog.show();
+
+			log.info("imported " + numKeysImported + " of " + numKeysToImport + " private keys");
 		}
 		catch (final IOException x)
 		{

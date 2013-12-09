@@ -30,6 +30,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import hashengineering.franko.wallet.R;
 
+
 /**
  * @author Andreas Schildbach
  */
