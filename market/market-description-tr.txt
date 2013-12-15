@@ -1,14 +1,27 @@
-Franko'leriniz daima cebinizde sizinle olsun! Herhangi bir QR kodunu okuyarak çabuk ödeme yapabilirsiniz. Bir tüccar olarak ödemeleri güvenilir ve anında alabilirsiniz. Franko cüzdanı ilk mobil Franko uygulamasıdır ve muhtemelen en güvenli Franko uygulamasıdır!
+<<<<<<< HEAD
+Android cihazınız için bağımsız bir Franko cüzdanı. Telefondan telefonda uygulama tarafından görüntülenen QR kodu tarayarak ya da NFC vasıtasıyla NFC (Near Field Communication) Franko gönderebilirsiniz.
+
+ÖZELLİKLERİ:
+
+• Cüzdan bakiyesini Franko olarak ve çeşitli döviz olarak gösterir.
+• QR Code, Franko bağlantıları ve NFC vasıtasıyla Franko alım ve gönderimi.
+• Düzenli kullanılan Franko adresleri için adres defteri.
+• Çevrimdışında girilen muameleler çevrimiçine girilince işlenir.
+• Alınan Frankoler ve Franko bağlantısı için sistem bildirimleri.
+• Franko bakiyesi için uygulama widget'i.
+=======
+digitalcoin'leriniz daima cebinizde sizinle olsun! Herhangi bir QR kodunu okuyarak çabuk ödeme yapabilirsiniz. Bir tüccar olarak ödemeleri güvenilir ve anında alabilirsiniz. digitalcoin cüzdanı ilk mobil digitalcoin uygulamasıdır ve muhtemelen en güvenli digitalcoin uygulamasıdır!
 
 İŞLEVLERİ:
 • Hiçbir oturuma, web ya da bulut hizmetine gerek yoktur. Bu cüzdan merkezsiz ve eşten eşedir.
-• Franko meblağlarının BTC ve mBTC olarak gösterilmesi.
+• digitalcoin meblağlarının BTC ve mBTC olarak gösterilmesi.
 • Dövizlere ve dövizlerden dönüştürme.
-• NFC, QR kodu veya Franko bağlantıları ile Franko gönderir ve alır.
-• Sık kullanılan Franko adresleri için adres defteri içerir.
+• NFC, QR kodu veya digitalcoin bağlantıları ile digitalcoin gönderir ve alır.
+• Sık kullanılan digitalcoin adresleri için adres defteri içerir.
 • Çevrimdışı olduğunuzda Bluetooth vasıtasıyla ödemeler.
-• Alınan Franko'ler için sistem bildirimleri.
-• Franko bakiyesini görüntüleyen widget.
+• Alınan digitalcoin'ler için sistem bildirimleri.
+• digitalcoin bakiyesini görüntüleyen widget.
+>>>>>>> upstream/prod
 
 Franko hakkında daha fazla bilgi için şu siteyi ziyaret edebilirsiniz:
 http://www.frankos.org
