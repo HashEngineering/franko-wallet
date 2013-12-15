@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-Sizin Frankoleriniz, kendi cebinizde!
-=======
-<<<<<<< HEAD
-Sizin digitalcoinleriniz, kendi cebinizde!
-=======
-Kendi Bitcoinleriniz, kendi cebinizde!
->>>>>>> upstream/prod
->>>>>>> upstream/prod
+Kendi Frankoleriniz, kendi cebinizde!
