@@ -1,13 +1,14 @@
-Con questa app avrai sempre i tuoi Franko con te, nella tua tasca! Puoi inviare pagamenti semplicemente scannerizzando un codice QR oppure avvicinando due telefonini insieme (NFC). Franko Wallet è progettato per essere facile d usare e affidabile, oltre a essere anche sicuro e veloce.
+Porta i tuoi Franko sempre con te, in tasca! Paghi velocemente scansionando un QR-code. Come un commerciante, riceverai i pagamenti sicuri e istantanei. Franko Wallet è la prima Franko app mobile, e probabilmente anche la più sicura!
 
 CARATTERISTICHE:
 
-• Non è necessario alcun server cloud o servizio web! Questo portafoglio è veramente peer to peer.
-• Mostra il saldo del portafoglio in Franko e in altre varie valute.
+• Non è necessaria alcuna registrazione, servizio web o cloud! Questo portafoglio è de-centralizzato e peer to peer.
+• Mostra l'ammontare di Franko in FRK e mFRK.
+• Conversione verso e dalle monete nazionali.
 • Invio e ricevimento di Franko tramite NFC, codici QR o URL Franko.
 • Rubrica degli indirizzi per usare indirizzi Franko regolarmente.
-• Inserisci transazioni mentre sei offline, saranno eseguite quando tornerai online.
-• Notifiche di sistema per la connettività Franko e la ricevuta di denaro.
+• Quando sei offline, puoi comunque ancora pagare via Bluetooth.
+• Sistema di notifica per le monete ricevute.
 • App Widget per il saldo Franko
 
 Puoi trovare altri dettagli su Franko su

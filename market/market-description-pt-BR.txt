@@ -1,13 +1,14 @@
-Com este aplicativo você sempre terá seus Frankos com você, no seu bolso! Você poderá efetuar pagamentos simplesmente escaneando um código QR ou aproximando dois telefones (NFC). O Franko Wallet foi desenvolvido visando a funcionalidade, segurança e velocidade.
+Tenha os seus Frankos sempre com você, no seu bolso! Efetue pagamentos rapidamente apenas escaneando um código QR​​. Como comerciante, você pode receber pagamentos de forma confiável e instantaneamente. O Franko Wallet é o primeiro aplicativo Franko móvel, e, possivelmente, o mais seguro!
 
 CARACTERÍSTICAS:
 
-• Nenhum servidor cloud ou serviço web é necessário! Esta carteira utiliza peer to peer.
-• Visualização do saldo da carteira em Frankos e outras moedas.
+• Sem necessidade de cadastro, serviço web ou hospedagem! Esta carteira é descentralizada e "peer to peer".
+• Exibe a quantidade de Frankos em BTC e mBTC.
+• Conversão para moedas nacionais.
 • Envio e recebimento de Frankos via NFC, códigos QR ou endereços Franko.
 • Catálogo para guardar os endereços mais utilizados.
-• As transações efetuadas offline são processadas quando conectado.
-• Notificações de sistema para conectividade Franko e recebimento de moedas.
+• Quando você estiver off-line, você ainda pode pagar via Bluetooth.
+• Notificações do sistema para moedas recebidas.
 • Widget para saldo de Frankos.
 
 Mais informações sobre Franko em

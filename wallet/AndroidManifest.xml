@@ -4,8 +4,8 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	package="hashengineering.franko.wallet"
 	android:installLocation="internalOnly"
-	android:versionCode="10022"
-	android:versionName="1.00.02" >
+	android:versionCode="10023"
+	android:versionName="1.00.3" >
 
 	<uses-sdk
 		android:minSdkVersion="10"
@@ -168,7 +168,9 @@
         <!-- Need to update this for the coin -->
 		<provider
 			android:name="de.schildbach.wallet.ExchangeRatesProvider"
+
 			android:authorities="hashengineering.franko.wallet.exchange_rates"
+
 			android:exported="false" />
 
 		<receiver

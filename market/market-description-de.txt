@@ -3,9 +3,9 @@ Hab deine Frankos immer dabei, in deiner Hosentasche! Du zahlst, indem du rasch 
 FEATURES:
 
 • Keine Registrierung, Web-Dienst oder Cloud nötig! Diese Wallet ist de-zentral und Peer to Peer.
-• Anzeige von Franko-Werten in BTC und mBTC.
-• Umrechnung von und zu den gesetzlichen Währungen.
-• Senden und Empfangen von Franko via NFC, QR-Codes oder Franko URLs.
+• Anzeige von Franko-Werten in FRK und mFRK.
+• Umrechnung von und zu den nationalen Währungen.
+• Senden und Empfangen von digitalcoin via NFC, QR-Codes oder digitalcoin URLs.
 • Adressbuch für regelmäßig genutzte Empfänger.
 • Wenn du offline bist, kannst du trotzdem über Bluetooth zahlen.
 • System-Benachrichtigung für den Empfang von Zahlungen.

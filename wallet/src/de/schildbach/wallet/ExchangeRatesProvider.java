@@ -1,5 +1,5 @@
 /*
- * Copyright 2011-2013 the original author or authors.
+ * Copyright 2011-2014 the original author or authors.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -128,11 +128,11 @@ public class ExchangeRatesProvider extends ContentProvider
 		if (exchangeRates == null || now - lastUpdated > UPDATE_FREQ_MS)
 		{
 			Map<String, ExchangeRate> newExchangeRates = null;
-			if (exchangeRates == null && newExchangeRates == null)
+			if (newExchangeRates == null)
 				newExchangeRates = requestExchangeRates(BITCOINAVERAGE_URL, BITCOINAVERAGE_FIELDS);
-			if (exchangeRates == null && newExchangeRates == null)
+			if (newExchangeRates == null)
 				newExchangeRates = requestExchangeRates(BITCOINCHARTS_URL, BITCOINCHARTS_FIELDS);
-			if (exchangeRates == null && newExchangeRates == null)
+			if (newExchangeRates == null)
 				newExchangeRates = requestExchangeRates(BLOCKCHAININFO_URL, BLOCKCHAININFO_FIELDS);
 
 			if (newExchangeRates != null)
@@ -225,6 +225,62 @@ public class ExchangeRatesProvider extends ContentProvider
 		throw new UnsupportedOperationException();
 	}
 
+    private static Object getCoinValueBTC_alternate()
+    {
+        Date date = new Date();
+        long now = date.getTime();
+
+
+
+        //final Map<String, ExchangeRate> rates = new TreeMap<String, ExchangeRate>();
+        // Keep the LTC rate around for a bit
+        Double btcRate = 0.0;
+        String currencyCryptsy = CoinDefinition.cryptsyMarketCurrency;
+        String urlCryptsy = CoinDefinition.alternateExchangeInfo;
+
+
+
+
+        try {
+            // final String currencyCode = currencies[i];
+            final URL URLCryptsy = new URL(urlCryptsy);
+            final URLConnection connectionCryptsy = URLCryptsy.openConnection();
+            connectionCryptsy.setConnectTimeout(Constants.HTTP_TIMEOUT_MS * 2);
+            connectionCryptsy.setReadTimeout(Constants.HTTP_TIMEOUT_MS * 2);
+            connectionCryptsy.connect();
+
+            final StringBuilder contentCryptsy = new StringBuilder();
+
+            Reader reader = null;
+            try
+            {
+                reader = new InputStreamReader(new BufferedInputStream(connectionCryptsy.getInputStream(), 1024));
+                Io.copy(reader, contentCryptsy);
+                final JSONObject head = new JSONObject(contentCryptsy.toString());
+
+                Double averageTrade = head.getDouble("btc_value");
+
+                if(currencyCryptsy.equalsIgnoreCase("BTC")) btcRate = averageTrade;
+
+            }
+            finally
+            {
+                if (reader != null)
+                    reader.close();
+            }
+            return btcRate;
+        }
+        catch (final IOException x)
+        {
+            x.printStackTrace();
+        }
+        catch (final JSONException x)
+        {
+            x.printStackTrace();
+        }
+
+        return null;
+    }
 
     private static Object getCoinValueBTC()
     {
@@ -315,6 +371,8 @@ public class ExchangeRatesProvider extends ContentProvider
 
 	private static Map<String, ExchangeRate> requestExchangeRates(final URL url, final String... fields)
 	{
+		final long start = System.currentTimeMillis();
+
 		HttpURLConnection connection = null;
 		Reader reader = null;
 
@@ -323,10 +381,15 @@ public class ExchangeRatesProvider extends ContentProvider
 
             Double btcRate = 0.0;
 
-            Object result = getCoinValueBTC();
+            Object result = null;//getCoinValueBTC();
 
             if(result == null)
-                return null;
+            {
+                result = getCoinValueBTC_alternate();
+                if(result == null)
+                    return null;
+                else btcRate = (Double)result;
+            }
 
             else btcRate = (Double)result;
 
@@ -347,7 +410,7 @@ public class ExchangeRatesProvider extends ContentProvider
 				final Map<String, ExchangeRate> rates = new TreeMap<String, ExchangeRate>();
 
                 //Add Bitcoin information
-                rates.put(CoinDefinition.cryptsyMarketCurrency, new ExchangeRate(CoinDefinition.cryptsyMarketCurrency, new BigInteger(String.format("%.8f", btcRate).replace(",", ".")), "pubapi.cryptsy.com"));
+                rates.put(CoinDefinition.cryptsyMarketCurrency, new ExchangeRate(CoinDefinition.cryptsyMarketCurrency, GenericUtils.toNanoCoins(String.format("%.8f", btcRate).replace(",", "."), 0), "pubapi.cryptsy.com"));
 
 				final JSONObject head = new JSONObject(content.toString());
 				for (final Iterator<String> i = head.keys(); i.hasNext();)
@@ -357,44 +420,49 @@ public class ExchangeRatesProvider extends ContentProvider
 					{
 						final JSONObject o = head.getJSONObject(currencyCode);
 
-						String rate = null;
 						for (final String field : fields)
 						{
-							rate = o.optString(field, null);
+							String rateStr = o.optString(field, null);
 
-							if (rate != null)
-								break;
-						}
-
-                        double rateForBTC = Double.parseDouble(rate);
-
-                        rate = String.format("%.8f", rateForBTC * btcRate);
-
-						if (rate != null)
-						{
-							try
+							if (rateStr != null)
 							{
-								rates.put(currencyCode, new ExchangeRate(currencyCode, new BigInteger(rate.replace(",", ".")), url.getHost()));
+								try
+								{
+                                    double rateForBTC = Double.parseDouble(rateStr);
 
-							}
-							catch (final ArithmeticException x)
-							{
-								log.debug("problem reading exchange rate: " + currencyCode, x);
+                                    rateStr = String.format("%.8f", rateForBTC * btcRate);
+
+									final BigInteger rate = GenericUtils.toNanoCoins(rateStr, 0);
+
+
+									if (rate.signum() > 0)
+									{
+										rates.put(currencyCode, new ExchangeRate(currencyCode, rate, url.getHost()));
+										break;
+									}
+								}
+								catch (final ArithmeticException x)
+								{
+									log.warn("problem fetching exchange rate: " + currencyCode, x);
+								}
+
 							}
 						}
 					}
 				}
 
+				log.info("fetched exchange rates from " + url + ", took " + (System.currentTimeMillis() - start) + " ms");
+
 				return rates;
 			}
 			else
 			{
-				log.debug("http status " + responseCode + " when fetching " + url);
+				log.warn("http status " + responseCode + " when fetching " + url);
 			}
 		}
 		catch (final Exception x)
 		{
-			log.debug("problem reading exchange rates", x);
+			log.warn("problem fetching exchange rates", x);
 		}
 		finally
 		{

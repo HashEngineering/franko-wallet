@@ -3,8 +3,8 @@ Have your Frankos always with you, in your pocket! You pay by quickly scanning a
 FEATURES:
 
 • No registration, web service or cloud needed! This wallet is de-centralized and peer to peer.
-• Display of Franko amount in BTC and mBTC.
-• Conversion to and from legitimate currencies.
+• Display of Franko amount in FRK and mFRK.
+• Conversion to and from national currencies.
 • Sending and receiving of Franko via NFC, QR-codes or Franko URLs.
 • Address book for regularly used Franko addresses.
 • When you're offline, you can still pay via Bluetooth.

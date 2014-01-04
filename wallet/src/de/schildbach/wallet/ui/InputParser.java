@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 the original author or authors.
+ * Copyright 2013-2014 the original author or authors.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -44,8 +44,8 @@ import com.google.bitcoin.uri.BitcoinURIParseException;
 import de.schildbach.wallet.Constants;
 import de.schildbach.wallet.util.Bluetooth;
 import de.schildbach.wallet.util.Qr;
-
 import hashengineering.franko.wallet.R;
+
 
 /**
  * @author Andreas Schildbach
