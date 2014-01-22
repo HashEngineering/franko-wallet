@@ -4,8 +4,8 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	package="hashengineering.franko.wallet"
 	android:installLocation="internalOnly"
-	android:versionCode="10024"
-	android:versionName="1.00.4" >
+	android:versionCode="10026"
+	android:versionName="1.00.6" >
 
 	<uses-sdk
 		android:minSdkVersion="10"

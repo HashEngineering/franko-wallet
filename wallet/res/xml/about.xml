@@ -10,7 +10,7 @@
 
 			android:title="Copyright" />
         <Preference
-                android:summary="Version 0.8.5.1 and above"
+                android:summary="Version 0.8.5.3 and above"
                 android:title="Franko Compatibility" />
 
 		<Preference
