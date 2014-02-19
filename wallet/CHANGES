@@ -1,28 +1,30 @@
+-------------------Franko Wallet
+
+v1.00.8
+* Updated checkpoints
+* decreases app_log file size usage
+
+
 v1.00
 Forked bitcoin-wallet v3.29 via digitalcoin 1.01  (http://frankos.org)
 
 
 -----------------digitalcoin Wallet
-=======
+
 
 v1.0.1 updated digitalcoin 1.0.1
 
->>>>>>> upstream/prod
 v1.00
 Forked bitcoin-wallet v3.28 for digitalcoin V1.00 (http://digitalcoin.co)
 
 
 =================Bitcoin Wallet
-
--------------------
 v3.29
 
 * fixed issues with fetching exchange rates
 * Slovak translation
 * updated French, Hungarian, Italian and Portuguese translations
 
->>>>>>> upstream/prod
->>>>>>> upstream/prod
 v3.28
 
 * for those who still use the unsecure address (pre-August), moves coins to secure addresses
