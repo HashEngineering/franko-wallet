@@ -4,8 +4,8 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	package="hashengineering.franko.wallet"
 	android:installLocation="internalOnly"
-	android:versionCode="10028"
-	android:versionName="1.00.8" >
+	android:versionCode="10029"
+	android:versionName="1.00.9" >
 
 	<uses-sdk
 		android:minSdkVersion="10"
@@ -93,7 +93,7 @@
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.intent.action.VIEW" />
 
-				<data android:scheme="bitcoin" />
+				<data android:scheme="franko" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
@@ -101,7 +101,7 @@
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
-				<data android:scheme="bitcoin" />
+				<data android:scheme="franko" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>

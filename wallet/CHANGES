@@ -1,4 +1,8 @@
 -------------------Franko Wallet
+v1.00.9
+* fixed URI intents
+* added native KimotoGravityWell support
+* updated checkpoints
 
 v1.00.8
 * Updated checkpoints
