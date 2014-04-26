@@ -52,6 +52,7 @@ public final class AboutActivity extends SherlockPreferenceActivity
  	private static final String KEY_ABOUT_CREDITS_BITCOINJ = "about_credits_bitcoinj";
 	private static final String KEY_ABOUT_CREDITS_ZXING = "about_credits_zxing";
 	private static final String KEY_ABOUT_CREDITS_ICON = "about_credits_icon";
+    private static final String KEY_ABOUT_NATIVESUPPORT = "about_nativesupport";
 
 	@Override
 	protected void onCreate(final Bundle savedInstanceState)
@@ -78,6 +79,9 @@ public final class AboutActivity extends SherlockPreferenceActivity
 		//findPreference(KEY_ABOUT_MARKET_PUBLISHER).setSummary(Constants.MARKET_PUBLISHER_URL);
         findPreference(KEY_ABOUT_CREDITS_WEBSITE).setSummary(Constants.CREDITS_WEBSITE_URL);
         findPreference(KEY_ABOUT_CREDITS_FORUM).setSummary(Constants.CREDITS_FORUM_URL);
+
+        String nativeSummary = String.format("FGW %s", hashengineering.difficulty.FrankoGravityWell.fgw.isNativeLibraryLoaded()?"active":"disabled");
+        findPreference(KEY_ABOUT_NATIVESUPPORT).setSummary(nativeSummary);
 
 	}
 
@@ -157,6 +161,7 @@ public final class AboutActivity extends SherlockPreferenceActivity
 			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.CREDITS_ZXING_URL)));
 			finish();
 		}
+
 		/*else if (KEY_ABOUT_CREDITS_ICON.equals(key))
 		{
 			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.CREDITS_ICON_URL)));
