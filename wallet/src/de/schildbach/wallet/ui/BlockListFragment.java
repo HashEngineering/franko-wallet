@@ -182,7 +182,7 @@ public final class BlockListFragment extends SherlockListFragment
 				{
 					case R.id.blocks_context_browse:
 						startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.EXPLORE_BASE_URL + "block/"
-								+ storedBlock.getHeader().getHashAsString())));
+								+ storedBlock.getHeight()/*getHeader().getHashAsString()*/)));
 
 						mode.finish();
 						return true;
